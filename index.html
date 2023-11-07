@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>The game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <section class="sec-1">
+        <h1>The cube game</h1>
+    </section>
+
+    <div class="main">
+        <!-- **************player 01*********************** -->
+        <div class="container-lg">
+            <div class="container-md">
+                <div class="container-sm" id="playerOne-1"></div>
+                <div class="container-sm" id="playerOne-2"></div>
+                <div class="container-sm" id="playerOne-3"></div>
+            </div>
+            <div class="container-md">
+                <div class="container-sm" id="playerOne-4"></div>
+                <div class="container-sm" id="playerOne-5"></div>
+                <div class="container-sm" id="playerOne-6"></div>
+            </div>
+            <div class="container-md">
+                <div class="container-sm" id="playerOne-7"></div>
+                <div class="container-sm" id="playerOne-8"></div>
+                <div class="container-sm" id="playerOne-9"></div>
+            </div>
+        </div>
+
+        <!-- **************player 02*********************** -->
+        <div class="container-lg-2">
+            <div class="container-md">
+                <div class="container-sm" id="playerTwo-1"></div>
+                <div class="container-sm" id="playerTwo-2"></div>
+                <div class="container-sm" id="playerTwo-3"></div>
+            </div>
+            <div class="container-md">
+                <div class="container-sm" id="playerTwo-4"></div>
+                <div class="container-sm" id="playerTwo-5"></div>
+                <div class="container-sm" id="playerTwo-6"></div>
+            </div>
+            <div class="container-md">
+                <div class="container-sm" id="playerTwo-7"></div>
+                <div class="container-sm" id="playerTwo-8"></div>
+                <div class="container-sm" id="playerTwo-9"></div>
+            </div>
+        </div>
+    </div>
+         
+    <section>
+        <button class="btn" onclick="myFunction()">PLAY</button>
+    </section>
+
+
+<!-- <p id="demo"></p>
+<p id="demo-1"></p> -->
+
+<script>
+   function myFunction() {
+
+        playerOne = Math.floor((Math.random() * 6) + 1);
+        playerTwo = Math.floor((Math.random() * 6) + 1);
+        // document.getElementById('demo').innerHTML = playerOne;
+        // document.getElementById('demo-1').innerHTML = playerTwo;
+  
+        if (playerOne == 1) {
+            document.getElementById('playerOne-5').style.visibility = "visible";
+            //**************hidden***********************
+            document.getElementById('playerOne-1').style.visibility = "hidden";
+            document.getElementById('playerOne-2').style.visibility = "hidden";
+            document.getElementById('playerOne-3').style.visibility = "hidden";
+            document.getElementById('playerOne-4').style.visibility = "hidden";
+            document.getElementById('playerOne-6').style.visibility = "hidden";
+            document.getElementById('playerOne-7').style.visibility = "hidden";
+            document.getElementById('playerOne-8').style.visibility = "hidden";
+            document.getElementById('playerOne-9').style.visibility = "hidden";
+        } else if(playerOne == 2){
+            document.getElementById('playerOne-4').style.visibility = "visible";
+            document.getElementById('playerOne-6').style.visibility = "visible";
+            //******************hidden**********************
+            document.getElementById('playerOne-1').style.visibility = "hidden";
+            document.getElementById('playerOne-2').style.visibility = "hidden";
+            document.getElementById('playerOne-3').style.visibility = "hidden";
+            document.getElementById('playerOne-5').style.visibility = "hidden";
+            document.getElementById('playerOne-7').style.visibility = "hidden";
+            document.getElementById('playerOne-8').style.visibility = "hidden";
+            document.getElementById('playerOne-9').style.visibility = "hidden";
+        }else if(playerOne == 3){
+            document.getElementById('playerOne-3').style.visibility = "visible";
+            document.getElementById('playerOne-5').style.visibility = "visible";
+            document.getElementById('playerOne-7').style.visibility = "visible";
+            //***************hidden************************
+            document.getElementById('playerOne-1').style.visibility = "hidden";
+            document.getElementById('playerOne-2').style.visibility = "hidden";
+            document.getElementById('playerOne-4').style.visibility = "hidden";
+            document.getElementById('playerOne-6').style.visibility = "hidden";
+            document.getElementById('playerOne-8').style.visibility = "hidden";
+            document.getElementById('playerOne-9').style.visibility = "hidden";
+        }else if (playerOne == 4) {
+            document.getElementById('playerOne-1').style.visibility = "visible";
+            document.getElementById('playerOne-3').style.visibility = "visible";
+            document.getElementById('playerOne-7').style.visibility = "visible";
+            document.getElementById('playerOne-9').style.visibility = "visible";
+            //*****************hidden***********************
+            document.getElementById('playerOne-2').style.visibility = "hidden";
+            document.getElementById('playerOne-4').style.visibility = "hidden";
+            document.getElementById('playerOne-5').style.visibility = "hidden";
+            document.getElementById('playerOne-6').style.visibility = "hidden";
+            document.getElementById('playerOne-8').style.visibility = "hidden";
+        }else if(playerOne == 5){
+            document.getElementById('playerOne-1').style.visibility = "visible";
+            document.getElementById('playerOne-3').style.visibility = "visible";
+            document.getElementById('playerOne-5').style.visibility = "visible";
+            document.getElementById('playerOne-7').style.visibility = "visible";
+            document.getElementById('playerOne-9').style.visibility = "visible";
+            //*****************hidden***********************
+            document.getElementById('playerOne-2').style.visibility = "hidden";
+            document.getElementById('playerOne-4').style.visibility = "hidden";
+            document.getElementById('playerOne-6').style.visibility = "hidden";
+            document.getElementById('playerOne-8').style.visibility = "hidden";   
+        }else if (playerOne == 6) {
+            document.getElementById('playerOne-1').style.visibility = "visible";
+            document.getElementById('playerOne-2').style.visibility = "visible";
+            document.getElementById('playerOne-3').style.visibility = "visible";
+            document.getElementById('playerOne-7').style.visibility = "visible";
+            document.getElementById('playerOne-8').style.visibility = "visible";
+            document.getElementById('playerOne-9').style.visibility = "visible";
+            //***************hidden*************************
+            document.getElementById('playerOne-4').style.visibility = "hidden";
+            document.getElementById('playerOne-5').style.visibility = "hidden";
+            document.getElementById('playerOne-6').style.visibility = "hidden";
+        }
+         
+        //********************playerTwo********************
+        if (playerTwo == 1) {
+            document.getElementById('playerTwo-5').style.visibility = "visible";
+            //**************hidden***********************
+            document.getElementById('playerTwo-1').style.visibility = "hidden";
+            document.getElementById('playerTwo-2').style.visibility = "hidden";
+            document.getElementById('playerTwo-3').style.visibility = "hidden";
+            document.getElementById('playerTwo-4').style.visibility = "hidden";
+            document.getElementById('playerTwo-6').style.visibility = "hidden";
+            document.getElementById('playerTwo-7').style.visibility = "hidden";
+            document.getElementById('playerTwo-8').style.visibility = "hidden";
+            document.getElementById('playerTwo-9').style.visibility = "hidden";
+        } else if(playerTwo == 2){
+            document.getElementById('playerTwo-4').style.visibility = "visible";
+            document.getElementById('playerTwo-6').style.visibility = "visible";
+            //******************hidden**********************
+            document.getElementById('playerTwo-1').style.visibility = "hidden";
+            document.getElementById('playerTwo-2').style.visibility = "hidden";
+            document.getElementById('playerTwo-3').style.visibility = "hidden";
+            document.getElementById('playerTwo-5').style.visibility = "hidden";
+            document.getElementById('playerTwo-7').style.visibility = "hidden";
+            document.getElementById('playerTwo-8').style.visibility = "hidden";
+            document.getElementById('playerTwo-9').style.visibility = "hidden";
+        }else if(playerTwo == 3){
+            document.getElementById('playerTwo-3').style.visibility = "visible";
+            document.getElementById('playerTwo-5').style.visibility = "visible";
+            document.getElementById('playerTwo-7').style.visibility = "visible";
+            //***************hidden************************
+            document.getElementById('playerTwo-1').style.visibility = "hidden";
+            document.getElementById('playerTwo-2').style.visibility = "hidden";
+            document.getElementById('playerTwo-4').style.visibility = "hidden";
+            document.getElementById('playerTwo-6').style.visibility = "hidden";
+            document.getElementById('playerTwo-8').style.visibility = "hidden";
+            document.getElementById('playerTwo-9').style.visibility = "hidden";
+        }else if (playerTwo == 4) {
+            document.getElementById('playerTwo-1').style.visibility = "visible";
+            document.getElementById('playerTwo-3').style.visibility = "visible";
+            document.getElementById('playerTwo-7').style.visibility = "visible";
+            document.getElementById('playerTwo-9').style.visibility = "visible";
+            //*****************hidden***********************
+            document.getElementById('playerTwo-2').style.visibility = "hidden";
+            document.getElementById('playerTwo-4').style.visibility = "hidden";
+            document.getElementById('playerTwo-5').style.visibility = "hidden";
+            document.getElementById('playerTwo-6').style.visibility = "hidden";
+            document.getElementById('playerTwo-8').style.visibility = "hidden";
+        }else if(playerTwo == 5){
+            document.getElementById('playerTwo-1').style.visibility = "visible";
+            document.getElementById('playerTwo-3').style.visibility = "visible";
+            document.getElementById('playerTwo-5').style.visibility = "visible";
+            document.getElementById('playerTwo-7').style.visibility = "visible";
+            document.getElementById('playerTwo-9').style.visibility = "visible";
+            //*****************hidden***********************
+            document.getElementById('playerTwo-2').style.visibility = "hidden";
+            document.getElementById('playerTwo-4').style.visibility = "hidden";
+            document.getElementById('playerTwo-6').style.visibility = "hidden";
+            document.getElementById('playerTwo-8').style.visibility = "hidden";   
+        }else if (playerTwo == 6) {
+            document.getElementById('playerTwo-1').style.visibility = "visible";
+            document.getElementById('playerTwo-2').style.visibility = "visible";
+            document.getElementById('playerTwo-3').style.visibility = "visible";
+            document.getElementById('playerTwo-7').style.visibility = "visible";
+            document.getElementById('playerTwo-8').style.visibility = "visible";
+            document.getElementById('playerTwo-9').style.visibility = "visible";
+            //***************hidden*************************
+            document.getElementById('playerTwo-4').style.visibility = "hidden";
+            document.getElementById('playerTwo-5').style.visibility = "hidden";
+            document.getElementById('playerTwo-6').style.visibility = "hidden";
+        }
+
+        
+}
+</script>
+        
+
+    </body>
+</html>
+
+
